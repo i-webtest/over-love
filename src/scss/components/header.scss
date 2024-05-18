@@ -1,0 +1,121 @@
+@use '../media' as *;
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  padding: 40px 0;
+
+  @include tablet {
+    padding: 20px 0;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 28px;
+
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__logo {
+    @include laptop {
+      width: 120px;
+    }
+
+    @include tablet {
+      width: 100px;
+    }
+  }
+
+  &__nav {
+    justify-self: end;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__nav-list {
+    display: flex;
+    gap: 72px;
+
+    @include laptop {
+      gap: 35px;
+    }
+  }
+
+  &__nav-item {
+  }
+
+  &__nav-link {
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #fff;
+  }
+
+  &__sign {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    text-transform: uppercase;
+    border: 2px solid #ffd703;
+    border-radius: 100px;
+    color: #ffd703;
+    padding: 12px 40px;
+
+    @include laptop {
+      padding: 10px 26px;
+    }
+
+    @include tablet {
+      display: none;
+    }
+
+    &::after {
+      content: '';
+      width: 24px;
+      height: 24px;
+      background-image: url('/img/flash.svg');
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__menu-btn {
+    position: relative;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    width: 29px;
+    height: 26px;
+
+    @include tablet {
+      display: flex;
+    }
+  }
+
+  &__menu-text {
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 0.5;
+    color: #ffd703;
+    text-transform: uppercase;
+  }
+
+  &__menu-decoration {
+    width: 29px;
+    height: 2px;
+    background-color: #ffd703;
+    border-radius: 2px;
+  }
+}

@@ -1,5 +1,4 @@
 @use 'fonts' as *;
-@use 'variables' as *;
 @use 'media' as *;
 
 html {
@@ -27,9 +26,8 @@ body {
   -webkit-tap-highlight-color: transparent;
   font-size: $font-size;
   font-weight: $font-weight;
-  line-height: $line-height;
-  color: $green;
-  background-color: $light;
+  letter-spacing: 0.01em;
+  background-color: #006977;
 }
 
 img,
@@ -80,8 +78,8 @@ iframe {
 }
 
 .container {
-  max-width: 1404px;
-  padding: 0 52px;
+  max-width: 1504px;
+  padding: 0 50px;
   margin: 0 auto;
 
   @include bigscreen {
@@ -90,7 +88,7 @@ iframe {
   }
 
   @include tablet {
-    padding: 0 46px;
+    padding: 0 42px;
   }
 
   @include mobile {
